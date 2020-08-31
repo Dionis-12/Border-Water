@@ -1,0 +1,80 @@
+
+
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.container .box {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	height: 400px;
+	justify-content: center;
+	position: relative;
+	width: 300px;
+	-webkit-box-reflect: below 15px linear-gradient(transparent,transparent,rgba(0,0,0,.2));
+}
+
+.container .box:hover {
+	color: #000;
+}
+
+.container .box:before {
+	background: #000;
+	border: 4px solid #fff;
+	content: '';
+	filter: url(#wavy);
+	height: 100%;
+	left: -10px;
+	position: absolute;
+	top: -10px;
+	width: 100%;
+}
+
+.container .box:hover:before {
+	background: #fff;
+	transition: 0.5s;
+}
+
+.container .box .content {
+	padding: 20px;
+	position: absolute;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.container .box:after {
+	background: rgba(255,255,255,.1);
+	border: 4px solid #fff;
+	border-right: none;
+	content: '';
+	filter: url(#wavy);
+	height: 100%;
+	left: -10px;
+	position: absolute;
+	top: -10px;
+	width: 50%;
+}
+
+svg {
+	height: 0;
+	width: 0;
+}
